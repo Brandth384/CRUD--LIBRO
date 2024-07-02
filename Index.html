@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="contenedor">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="alert alert-primary text-center">
+                    Aplicaciones de estantería de libreria
+                </h1>
+            </div>
+               <header>
+                <nav>
+                 <li>
+                    <a href="Index.html">
+                        Iniciar Sesión👾
+                    </a>
+                 </li>
+                 <li>
+                    <a href="">
+                        Crear Cuenta 🧑‍💻
+                    </a>
+                 </li>
+                 <li>
+                    <a href="">
+                        Terminos y Condiciones🔎
+                    </a>
+                 </li>
+                 <li>
+                    <a href="">
+                        Soporte tecnico🧰
+                    </a>
+                 </li>
+                </nav>
+               </header>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="form">
+                            <input type="hidden" name="id" id="inputBookId">
+                            <label for="inputBookTitle">Titulo</label>
+                            <input type="text" placeholder="Nombre del Libro" class="form-control" id="inputBookTitle" required>
+                            <br>
+                            <label for="inputBookAuthor">Autor o Autora</label>
+                            <input type="text" placeholder="Nombre del personaje" class="form-control" id="inputBookAuthor" required>
+                            <br>
+                            <label for="inputBookYear">El año</label>
+                            <input type="number" placeholder="Año del libro" class="form-control" id="inputBookYear" required>
+                            <br>
+                            <label for="inputBookIsComplete">Lectura de derminada</label>
+                            <input id="inputBookIsComplete" type="checkbox">
+                            <br>
+                            <br>
+                            <button class="btn btn-sm btn-primary" type="button" onclick="save()">Guardar</button>
+                            <button class="btn btn-sm btn-primary" type="button" onclick="clearData()">Resetear</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                      <h2>Libros Guardados</h2>
+                        <div class="table-responsive">
+                            <table id="datatable" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Noº</th>
+                                        <th>Titulo</th>
+                                        <th>Autor</th>
+                                        <th>Año</th>
+                                        <th>Leer</th>       
+                                        <th>Editar</th>
+                                        <th>Borrar</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table">
+        
+                                </tbody>
+                            </table>
+                        </div><hr>
+                        <h2>Para Leer</h2>
+                        <div class="table-responsive">
+                          <table id="datatable" class="table table-striped">
+                              <thead>
+                                  <tr>
+                                      <th>Noº</th>
+                                      <th>Titulo</th>
+                                      <th>Autor</th>
+                                      <th>Año</th>
+                                      <th>No leído</th>
+                                      <th>Editar</th>
+                                      <th>Borrar</th>
+                                  </tr>
+                              </thead>
+                              <tbody id="table2">
+      
+                              </tbody>
+                          </table>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer>
+        <div class="seccion">Este proyecto esta con fines academicos🙂</div>
+        <div class="Derecha">Puedes seguirme en redes sociales</div>
+        <div class="rigth">Facebook: Brandon Chan;</div>
+        <div class="logo"> <img src="Imagenes/Facebook.png"  alt=""/> 
+         <div class="Derecha2">Instagram: Brandth12@</div>
+         <div class="logo2"> <img src="Imagenes/Instagram.png"/> </div>
+         <div class="left">Agenda tus lista de libro y leelos con mas te acomodes😎</div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+        allData()
+    </script>
+    <script>
+        function clearData(){
+            document.getElementById('form').reset()
+            document.getElementById('id').value = ""
+        }
+    </script>
+  </body>
+</html>
